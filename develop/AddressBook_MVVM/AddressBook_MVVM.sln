@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.2.32616.157
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AddressBook_View", "AddressBook_MVVM_View\AddressBook_View.csproj", "{A58F7FB5-EEBC-499B-B658-09022127879B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AddressBook.View", "AddressBook_MVVM_View\AddressBook.View.csproj", "{A58F7FB5-EEBC-499B-B658-09022127879B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AddressBoook_Model", "AddressBoook_MVVM_Model\AddressBoook_Model.csproj", "{0D3EA216-D96B-44A4-89D6-60322C42DC04}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AddressBoook.Model", "AddressBoook_MVVM_Model\AddressBoook.Model.csproj", "{0D3EA216-D96B-44A4-89D6-60322C42DC04}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AddressBook_ViewModel", "AddressBook_MVVM\AddressBook_ViewModel.csproj", "{6D661E51-D5E1-4B40-8CF5-EB2EE21ED571}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AddressBook.ViewModel", "AddressBook_MVVM\AddressBook.ViewModel.csproj", "{6D661E51-D5E1-4B40-8CF5-EB2EE21ED571}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
