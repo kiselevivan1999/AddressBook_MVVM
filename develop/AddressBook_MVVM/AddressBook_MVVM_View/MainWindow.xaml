@@ -5,8 +5,56 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:AddressBook_MVVM_View"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
-
+        Title="Адресная книга" Height="400" Width="800"
+        MinHeight="360" MinWidth="600"
+        Closing="Window_Closing">
+    <Window.DataContext>
+        <local:MainWindowVM/>
+    </Window.DataContext>
+    <Grid Margin="0,0,0,2">
+        <GroupBox Header="Контакты: " Margin="10,20,0,100" HorizontalAlignment="Left" Width="240">
+            <ListBox x:Name="ContactsListBox" d:ItemsSource="{Binding Contacts}" SelectedItem="{Binding SelectedContact}">
+                <ListBox.ItemTemplate>
+                    <DataTemplate>
+                        <TextBlock Text="{Binding Path=Surname, UpdateSourceTrigger=Explicit}"/>
+                    </DataTemplate>
+                </ListBox.ItemTemplate>
+            </ListBox>
+        </GroupBox>
+        <GroupBox Header="Данные контакта" Margin="260,20,20,30" Background="WhiteSmoke">
+            <StackPanel DataContext="{Binding SelectedContact}">
+                <Label x:Name="IdLabel" Content="ID: " Background="AliceBlue"/>
+                <TextBlock x:Name="IdTextBlock" Text="{Binding Id}" Height="20" Background="White"/>
+                <Label x:Name="SurnameLabel" Content="Фамилия: " Background="AliceBlue"/>
+                <TextBlock x:Name="SurnameTextBox" Text="{Binding Surname}" Height="20" Background="White"/>
+                <Label x:Name="NameLabel" Content="Имя: " Background="AliceBlue"/>
+                <TextBlock x:Name="NameTextBox" Text="{Binding Name}" Height="20" Background="White"/>
+                <Label x:Name="PatronymicLabel" Content="Отчество: " Background="AliceBlue"/>
+                <TextBlock x:Name="PatronymicTextBlock" Text="{Binding Patronymic}" Height="20" Background="White"/>
+                <Label x:Name="PhoneNumberLabel" Content="Номер телефона: " Background="AliceBlue"/>
+                <TextBlock x:Name="PhoneNumberTextBlock" Text="{Binding Phone}" Height="20" Background="White"/>
+            </StackPanel>
+        </GroupBox>
+        <Button x:Name="AddButton" Margin="10,0,0,55" Background="White" BorderBrush="White" HorizontalAlignment="Left" Width="60" Height="40" VerticalAlignment="Bottom" Click="AddButton_Click">
+            <Button.ContentTemplate>
+                <DataTemplate>
+                    <Image Source="Resources/plus.png"/>
+                </DataTemplate>
+            </Button.ContentTemplate>
+        </Button>
+        <Button x:Name="EditButton" Margin="75,0,0,55" Background="White" BorderBrush="White" HorizontalAlignment="Left" Width="60" Height="40" VerticalAlignment="Bottom" Click="EditButton_Click">
+            <Button.ContentTemplate>
+                <DataTemplate>
+                    <Image Source="Resources/edit.png"/>
+                </DataTemplate>
+            </Button.ContentTemplate>
+        </Button>
+        <Button x:Name="DeleteButton" Margin="140,0,0,55" Background="White" BorderBrush="White" HorizontalAlignment="Left" Width="60" Height="40" VerticalAlignment="Bottom" Click="DeleteButton_Click">
+            <Button.ContentTemplate>
+                <DataTemplate>
+                    <Image Source="Resources/minus.png"/>
+                </DataTemplate>
+            </Button.ContentTemplate>
+        </Button>
     </Grid>
 </Window>

@@ -5,8 +5,24 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:AddressBook_View"
         mc:Ignorable="d"
-        Title="ContactWindow" Height="450" Width="800">
+        Title="Добавление/Редактирование контакта" Height="340" Width="600" 
+        MinHeight="340" MaxHeight="340" MinWidth="600" MaxWidth="600">
     <Grid>
-        
+        <GroupBox Header="Данные контакта:" Background="WhiteSmoke" VerticalAlignment="Top" Margin="10">
+            <StackPanel>
+                <Label x:Name="IdLabel" Content="ID: " Background="AliceBlue"/>
+                <TextBlock x:Name="IdTextBlock" Height="20" Background="White"/>
+                <Label x:Name="SurnameLabel" Content="Фамилия: " Background="AliceBlue"/>
+                <TextBox x:Name="SurnameTextBox" Height="20" Background="White" TextChanged="SurnameTextBox_TextChanged"/>
+                <Label x:Name="NameLabel" Content="Имя: " Background="AliceBlue"/>
+                <TextBox x:Name="NameTextBox" Height="20" Background="White" TextChanged="NameTextBox_TextChanged"/>
+                <Label x:Name="PatronymicLabel" Content="Отчество: " Background="AliceBlue"/>
+                <TextBox x:Name="PatronymicTextBox" Height="20" Background="White" TextChanged="PatronymicTextBox_TextChanged"/>
+                <Label x:Name="PhoneNumberLabel" Content="Номер телефона: " Background="AliceBlue"/>
+                <TextBox x:Name="PhoneNumberTextBox" Height="20" Background="White" TextChanged="PhoneNumberTextBox_TextChanged"/>
+            </StackPanel>
+        </GroupBox>
+        <Button x:Name="AddButton" Content="Add" Margin="0,268,93,0" Height="25" Width="70" VerticalAlignment="Top" HorizontalAlignment="Right" Click="AddButton_Click"/>
+        <Button x:Name="CanselButton" Content="Cancel" Margin="0,268,10,0" Height="25" Width="70" VerticalAlignment="Top" HorizontalAlignment="Right" Click="CanselButton_Click"/>
     </Grid>
 </Window>
