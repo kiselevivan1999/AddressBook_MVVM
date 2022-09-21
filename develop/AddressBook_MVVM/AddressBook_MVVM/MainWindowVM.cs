@@ -2,7 +2,7 @@
 
 namespace AddressBook_MVVM
 {
-    public class Class1
+    public class MainWindowVM
     {
     }
 }

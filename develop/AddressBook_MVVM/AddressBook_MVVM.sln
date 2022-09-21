@@ -7,7 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AddressBook_View", "Address
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AddressBoook_Model", "AddressBoook_MVVM_Model\AddressBoook_Model.csproj", "{0D3EA216-D96B-44A4-89D6-60322C42DC04}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AddressBook_MVVM", "AddressBook_MVVM\AddressBook_MVVM.csproj", "{6D661E51-D5E1-4B40-8CF5-EB2EE21ED571}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AddressBook_ViewModel", "AddressBook_MVVM\AddressBook_ViewModel.csproj", "{6D661E51-D5E1-4B40-8CF5-EB2EE21ED571}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
