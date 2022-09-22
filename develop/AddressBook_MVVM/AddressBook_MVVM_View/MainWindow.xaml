@@ -34,7 +34,8 @@
                 <TextBlock x:Name="PhoneNumberTextBlock" Text="{Binding Phone}" Height="20" Background="White"/>
             </StackPanel>
         </GroupBox>
-        <Button x:Name="AddButton" Margin="10,0,0,55" Background="White" BorderBrush="White" HorizontalAlignment="Left" Width="60" Height="40" VerticalAlignment="Bottom">
+        <Button x:Name="AddButton" Margin="10,0,0,55" Background="White" BorderBrush="White" 
+                HorizontalAlignment="Left" Width="60" Height="40" VerticalAlignment="Bottom" Command="{Binding Save}">
             <Button.ContentTemplate>
                 <DataTemplate>
                     <Image Source="/plus.png"/>

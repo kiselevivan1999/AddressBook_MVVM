@@ -2,6 +2,8 @@
 using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
+using AddressBook.ViewModel.Commands;
+using System.Windows.Input;
 
 namespace AddressBook.ViewModel
 {
@@ -19,10 +21,23 @@ namespace AddressBook.ViewModel
                 OnPropertyChanged();
             }
         }
+        
+
+        public ICommand Save { get; }
+
+        public bool CanSaveExecute(object p) => true;
+
+        public void Save_Executed(object p)
+        {
+            //ProjectSerializer.SaveToFile(contacts);
+        }
+        
 
         public MainWindowVM()
         {
             Contacts = new ObservableCollection<Contact>(ProjectSerializer.LoadFromFile());
+
+            Save = new LambdaCommand(Save_Executed, CanSaveExecute);
         }
 
         public ObservableCollection<Contact> Contacts { get; set; }

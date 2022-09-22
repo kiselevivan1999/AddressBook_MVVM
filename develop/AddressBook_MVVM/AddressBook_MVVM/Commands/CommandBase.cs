@@ -5,16 +5,14 @@ namespace AddressBook.ViewModel.Commands
 {
     public abstract class CommandBase : ICommand
     {
-        public event EventHandler CanExecuteChanged;
-
-        public bool CanExecute(object parameter)
+        public event EventHandler CanExecuteChanged 
         {
-            throw new NotImplementedException();
+            add => CommandManager.RequerySuggested += value;
+            remove => CommandManager.RequerySuggested -= value;
         }
 
-        public void Execute(object parameter)
-        {
-            throw new NotImplementedException();
-        }
+        public abstract bool CanExecute(object parameter);
+
+        public abstract void Execute(object parameter);
     }
 }
