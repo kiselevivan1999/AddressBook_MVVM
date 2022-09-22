@@ -7,7 +7,23 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="edit.png" />
+    <None Remove="minus.png" />
+    <None Remove="plus.png" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Folder Include="Resources\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\AddressBook_MVVM\AddressBook.ViewModel.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="edit.png" />
+    <Resource Include="minus.png" />
+    <Resource Include="plus.png" />
   </ItemGroup>
 
 </Project>

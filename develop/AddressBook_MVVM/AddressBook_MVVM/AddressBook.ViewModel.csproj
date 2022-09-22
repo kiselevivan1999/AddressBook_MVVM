@@ -4,4 +4,8 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\AddressBoook_MVVM_Model\AddressBoook.Model.csproj" />
+  </ItemGroup>
+
 </Project>

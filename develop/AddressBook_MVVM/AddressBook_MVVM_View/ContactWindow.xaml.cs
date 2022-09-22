@@ -10,7 +10,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 
-namespace AddressBook_View
+namespace AddressBook.View
 {
     /// <summary>
     /// Логика взаимодействия для ContactWindow.xaml

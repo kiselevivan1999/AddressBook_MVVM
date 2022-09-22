@@ -12,8 +12,9 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using AddressBook.ViewModel;
 
-namespace AddressBook_MVVM_View
+namespace AddressBook.View
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
